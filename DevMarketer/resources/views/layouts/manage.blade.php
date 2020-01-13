@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>DevMarketer</title>
+    <title>DevMarketer -  MANAGEMENT</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -22,12 +22,13 @@
 <body>
     <div id="app">
         
-         <!-- <nav class="navbar has-shadow navbar-menu">
+        <!-- <nav class="navbar has-shadow navbar-menu">
             <div class="container ">
                 <div class="navbar-start" style="overflow:visible;">
                     <a class="navbar-item" href=" {{url('home')}}">
                         <img src="https://bulma.io/images/bulma-logo.png" alt="DevMarketer Logo">
                     </a>
+                    
                     <a href="#" class="navbar-item is-tab is-hidden-mobile m-l-10">Learn</a>
                     <a href="#" class="navbar-item is-tab is-hidden-mobile">Discuss</a>
                     <a href="#" class="navbar-item is-tab is-hidden-mobile">Share</a>
@@ -62,11 +63,12 @@
                     @endif
                 </div>
             </div>
-        </nav>  -->
+        </nav> -->
         @include('_includes.nav.main')
+        @include('_includes.nav.manage')
 
         <main class="py-4">
-            <div class="container">
+            <div class="container ">
                 @yield('content')
             </div>
         </main>

@@ -3489,7 +3489,7 @@ th:not([align]) {
 }
 
 html {
-  background-color: white;
+  background-color: #f5f5f5;
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -4262,19 +4262,19 @@ a.has-text-danger:focus {
 }
 
 .has-text-grey {
-  color: #7a7a7a !important;
+  color: #777777 !important;
 }
 
 .has-background-grey {
-  background-color: #7a7a7a !important;
+  background-color: #777777 !important;
 }
 
 .has-text-grey-light {
-  color: #b5b5b5 !important;
+  color: #aaaaaa !important;
 }
 
 .has-background-grey-light {
-  background-color: #b5b5b5 !important;
+  background-color: #aaaaaa !important;
 }
 
 .has-text-grey-lighter {
@@ -4861,7 +4861,7 @@ a.box:active {
 
 .button:hover,
 .button.is-hovered {
-  border-color: #b5b5b5;
+  border-color: #aaaaaa;
   color: #363636;
 }
 
@@ -6300,7 +6300,7 @@ fieldset[disabled] .button {
 .button.is-static {
   background-color: whitesmoke;
   border-color: #dbdbdb;
-  color: #7a7a7a;
+  color: #777777;
   box-shadow: none;
   pointer-events: none;
 }
@@ -7833,7 +7833,7 @@ a.tag:hover {
 .is-hovered.textarea,
 .is-hovered.input,
 .taginput .is-hovered.taginput-container.is-focusable {
-  border-color: #b5b5b5;
+  border-color: #aaaaaa;
 }
 
 .select select:focus,
@@ -7869,7 +7869,7 @@ fieldset[disabled] .taginput .taginput-container.is-focusable,
   background-color: whitesmoke;
   border-color: whitesmoke;
   box-shadow: none;
-  color: #7a7a7a;
+  color: #777777;
 }
 
 .select select[disabled]::-moz-placeholder,
@@ -7882,7 +7882,7 @@ fieldset[disabled] .textarea::-moz-placeholder,
 fieldset[disabled] .input::-moz-placeholder,
 fieldset[disabled] .taginput .taginput-container.is-focusable::-moz-placeholder,
 .taginput fieldset[disabled] .taginput-container.is-focusable::-moz-placeholder {
-  color: rgba(122, 122, 122, 0.3);
+  color: rgba(119, 119, 119, 0.3);
 }
 
 .select select[disabled]::-webkit-input-placeholder,
@@ -7895,7 +7895,7 @@ fieldset[disabled] .textarea::-webkit-input-placeholder,
 fieldset[disabled] .input::-webkit-input-placeholder,
 fieldset[disabled] .taginput .taginput-container.is-focusable::-webkit-input-placeholder,
 .taginput fieldset[disabled] .taginput-container.is-focusable::-webkit-input-placeholder {
-  color: rgba(122, 122, 122, 0.3);
+  color: rgba(119, 119, 119, 0.3);
 }
 
 .select select[disabled]:-moz-placeholder,
@@ -7908,7 +7908,7 @@ fieldset[disabled] .textarea:-moz-placeholder,
 fieldset[disabled] .input:-moz-placeholder,
 fieldset[disabled] .taginput .taginput-container.is-focusable:-moz-placeholder,
 .taginput fieldset[disabled] .taginput-container.is-focusable:-moz-placeholder {
-  color: rgba(122, 122, 122, 0.3);
+  color: rgba(119, 119, 119, 0.3);
 }
 
 .select select[disabled]:-ms-input-placeholder,
@@ -7921,7 +7921,7 @@ fieldset[disabled] .textarea:-ms-input-placeholder,
 fieldset[disabled] .input:-ms-input-placeholder,
 fieldset[disabled] .taginput .taginput-container.is-focusable:-ms-input-placeholder,
 .taginput fieldset[disabled] .taginput-container.is-focusable:-ms-input-placeholder {
-  color: rgba(122, 122, 122, 0.3);
+  color: rgba(119, 119, 119, 0.3);
 }
 
 .textarea,
@@ -8240,7 +8240,7 @@ fieldset[disabled] .taginput .taginput-container.is-focusable:-ms-input-placehol
 [disabled].checkbox,
 fieldset[disabled] .radio,
 fieldset[disabled] .checkbox {
-  color: #7a7a7a;
+  color: #777777;
   cursor: not-allowed;
 }
 
@@ -8518,7 +8518,7 @@ fieldset[disabled] .select select:hover {
 }
 
 .select.is-disabled::after {
-  border-color: #7a7a7a;
+  border-color: #777777;
 }
 
 .select.is-fullwidth {
@@ -9490,7 +9490,7 @@ fieldset[disabled] .select select:hover {
 }
 
 .breadcrumb li + li::before {
-  color: #b5b5b5;
+  color: #aaaaaa;
   content: "/";
 }
 
@@ -10010,7 +10010,7 @@ a.list-item {
 }
 
 .menu-label {
-  color: #7a7a7a;
+  color: #777777;
   font-size: 0.75em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -11682,7 +11682,7 @@ a.navbar-item.is-active,
 .pagination-previous:hover,
 .pagination-next:hover,
 .pagination-link:hover {
-  border-color: #b5b5b5;
+  border-color: #aaaaaa;
   color: #363636;
 }
 
@@ -11704,7 +11704,7 @@ a.navbar-item.is-active,
   background-color: #dbdbdb;
   border-color: #dbdbdb;
   box-shadow: none;
-  color: #7a7a7a;
+  color: #777777;
   opacity: 0.5;
 }
 
@@ -11722,7 +11722,7 @@ a.navbar-item.is-active,
 }
 
 .pagination-ellipsis {
-  color: #b5b5b5;
+  color: #aaaaaa;
   pointer-events: none;
 }
 
@@ -12052,7 +12052,7 @@ label.panel-block:hover {
   text-align: center;
   vertical-align: top;
   width: 1em;
-  color: #7a7a7a;
+  color: #777777;
   margin-right: 0.75em;
 }
 
@@ -12189,7 +12189,7 @@ label.panel-block:hover {
 
 .tabs.is-toggle a:hover {
   background-color: whitesmoke;
-  border-color: #b5b5b5;
+  border-color: #aaaaaa;
   z-index: 2;
 }
 
@@ -16230,7 +16230,7 @@ label.panel-block:hover {
   height: 1.25em;
   flex-shrink: 0;
   border-radius: 4px;
-  border: 2px solid #7a7a7a;
+  border: 2px solid #777777;
   -webkit-transition: background 150ms ease-out;
   transition: background 150ms ease-out;
   background: transparent;
@@ -16347,7 +16347,7 @@ label.panel-block:hover {
 }
 
 .b-checkbox.checkbox input[type=checkbox]:focus + .check {
-  box-shadow: 0 0 0.5em rgba(122, 122, 122, 0.8);
+  box-shadow: 0 0 0.5em rgba(119, 119, 119, 0.8);
 }
 
 .b-checkbox.checkbox input[type=checkbox]:focus:checked + .check {
@@ -16986,7 +16986,7 @@ label.panel-block:hover {
 }
 
 .datepicker .datepicker-table .datepicker-header .datepicker-cell {
-  color: #7a7a7a;
+  color: #777777;
   font-weight: 600;
 }
 
@@ -17020,7 +17020,7 @@ label.panel-block:hover {
 }
 
 .datepicker .datepicker-table .datepicker-body .datepicker-cell.is-unselectable {
-  color: #b5b5b5;
+  color: #aaaaaa;
 }
 
 .datepicker .datepicker-table .datepicker-body .datepicker-cell.is-today {
@@ -17039,7 +17039,7 @@ label.panel-block:hover {
 }
 
 .datepicker .datepicker-table .datepicker-body .datepicker-cell.is-selectable.is-within-hovered-range.is-first-hovered {
-  background-color: #7a7a7a;
+  background-color: #777777;
   color: #dbdbdb;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
@@ -17052,7 +17052,7 @@ label.panel-block:hover {
 }
 
 .datepicker .datepicker-table .datepicker-body .datepicker-cell.is-selectable.is-within-hovered-range.is-last-hovered {
-  background-color: #7a7a7a;
+  background-color: #777777;
   color: #dbdbdb;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
@@ -17083,7 +17083,7 @@ label.panel-block:hover {
 }
 
 .datepicker .datepicker-table .datepicker-body .datepicker-cell.is-nearby:not(.is-selected) {
-  color: #b5b5b5;
+  color: #aaaaaa;
 }
 
 .datepicker .datepicker-table .datepicker-body .datepicker-cell.is-week-number {
@@ -18144,7 +18144,7 @@ label.panel-block:hover {
   -webkit-transition: background 150ms ease-out;
   transition: background 150ms ease-out;
   border-radius: 50%;
-  border: 2px solid #7a7a7a;
+  border: 2px solid #777777;
 }
 
 .b-radio.radio input[type=radio] + .check:before {
@@ -18258,7 +18258,7 @@ label.panel-block:hover {
 }
 
 .b-radio.radio input[type=radio]:focus + .check {
-  box-shadow: 0 0 0.5em rgba(122, 122, 122, 0.8);
+  box-shadow: 0 0 0.5em rgba(119, 119, 119, 0.8);
 }
 
 .b-radio.radio input[type=radio]:focus:checked + .check {
@@ -18480,14 +18480,14 @@ label.panel-block:hover {
 }
 
 .select select optgroup {
-  color: #b5b5b5;
+  color: #aaaaaa;
   font-weight: 400;
   font-style: normal;
   padding: 0.25em 0;
 }
 
 .select.is-empty select {
-  color: rgba(122, 122, 122, 0.7);
+  color: rgba(119, 119, 119, 0.7);
 }
 
 .b-slider {
@@ -18510,10 +18510,10 @@ label.panel-block:hover {
 .b-slider .b-slider-fill {
   position: absolute;
   height: 100%;
-  box-shadow: 0px 0px 0px #7a7a7a;
+  box-shadow: 0px 0px 0px #777777;
   background: #dbdbdb;
   border-radius: 4px;
-  border: 0px solid #7a7a7a;
+  border: 0px solid #777777;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -18537,7 +18537,7 @@ label.panel-block:hover {
 
 .b-slider .b-slider-thumb-wrapper .b-slider-thumb {
   box-shadow: none;
-  border: 1px solid #b5b5b5;
+  border: 1px solid #aaaaaa;
   border-radius: 4px;
   background: white;
 }
@@ -18709,7 +18709,7 @@ label.panel-block:hover {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   top: 50%;
-  background: #b5b5b5;
+  background: #aaaaaa;
   border-radius: 4px;
 }
 
@@ -18760,7 +18760,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   font-weight: 700;
   -webkit-box-pack: center;
           justify-content: center;
-  background: #b5b5b5;
+  background: #aaaaaa;
   color: white;
   border: 0.2em solid #fff;
   z-index: 1;
@@ -19480,7 +19480,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   width: 2.75em;
   height: 1.575em;
   padding: 0.2em;
-  background: #b5b5b5;
+  background: #aaaaaa;
   border-radius: 4px;
   -webkit-transition: background 150ms ease-out;
   transition: background 150ms ease-out;
@@ -19564,7 +19564,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 }
 
 .switch input[type=checkbox]:focus + .check {
-  box-shadow: 0 0 0.5em rgba(122, 122, 122, 0.6);
+  box-shadow: 0 0 0.5em rgba(119, 119, 119, 0.6);
 }
 
 .switch input[type=checkbox]:focus:checked + .check {
@@ -19616,7 +19616,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 }
 
 .switch:hover input[type=checkbox] + .check {
-  background: rgba(181, 181, 181, 0.9);
+  background: rgba(170, 170, 170, 0.9);
 }
 
 .switch:hover input[type=checkbox]:checked + .check {
@@ -19673,11 +19673,11 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 
 .switch.is-outlined input[type=checkbox] + .check {
   background: transparent;
-  border: 0.1rem solid #b5b5b5;
+  border: 0.1rem solid #aaaaaa;
 }
 
 .switch.is-outlined input[type=checkbox] + .check:before {
-  background: #b5b5b5;
+  background: #aaaaaa;
 }
 
 .switch.is-outlined input[type=checkbox]:checked + .check {
@@ -19780,7 +19780,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 
 .switch.is-outlined:hover input[type=checkbox] + .check {
   background: transparent;
-  border-color: rgba(181, 181, 181, 0.9);
+  border-color: rgba(170, 170, 170, 0.9);
 }
 
 .switch.is-outlined:hover input[type=checkbox]:checked + .check {
@@ -19844,7 +19844,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 .switch[disabled] {
   opacity: 0.5;
   cursor: not-allowed;
-  color: #7a7a7a;
+  color: #777777;
 }
 
 .table-wrapper .table {
@@ -19932,12 +19932,12 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 }
 
 .b-table .table th.is-current-sort {
-  border-color: #7a7a7a;
+  border-color: #777777;
   font-weight: 700;
 }
 
 .b-table .table th.is-sortable:hover {
-  border-color: #7a7a7a;
+  border-color: #777777;
 }
 
 .b-table .table th.is-sortable,
@@ -20314,7 +20314,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 }
 
 .timepicker .dropdown-content .control .select select option:disabled {
-  color: rgba(122, 122, 122, 0.7);
+  color: rgba(119, 119, 119, 0.7);
 }
 
 .timepicker .dropdown-content .control .select:after {
@@ -20808,7 +20808,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 }
 
 .b-tooltip.is-dashed {
-  border-bottom: 1px dashed #b5b5b5;
+  border-bottom: 1px dashed #aaaaaa;
   cursor: default;
 }
 
@@ -20843,7 +20843,7 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 .upload .upload-draggable {
   cursor: pointer;
   padding: 0.25em;
-  border: 1px dashed #b5b5b5;
+  border: 1px dashed #aaaaaa;
   border-radius: 6px;
 }
 
@@ -20947,6 +20947,22 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   }
 }
 
+/*==========================================
+  ============ Text Overrides ==============
+  ==========================================*/
+
+.is-muted {
+  color: #aaaaaa !important;
+}
+
+a.is-muted:hover {
+  color: #777777 !important;
+}
+
+/*==========================================
+============ Dropdown Overrides ============  un useed
+==========================================*/
+
 .dropdown {
   position: relative;
 }
@@ -20974,6 +20990,10 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 
 .navbar-item img {
   max-height: 3rem;
+}
+
+.menu-list:hover {
+  color: #04dfa8;
 }
 
 .m-t-5 {
@@ -21454,5 +21474,13 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 
 .p-r-100 {
   padding-right: 100px;
+}
+
+.side-menu {
+  position: fixed;
+  height: 100vh;
+  widows: 200px;
+  background-color: white;
+  overflow-y: scroll;
 }
 

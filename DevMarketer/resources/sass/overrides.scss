@@ -1,3 +1,16 @@
+/*==========================================
+  ============ Text Overrides ==============
+  ==========================================*/
+.is-muted{
+    color: $grey-light !important;
+}
+a.is-muted:hover{
+    color: $grey !important;
+}
+
+  /*==========================================
+  ============ Dropdown Overrides ============  un useed
+  ==========================================*/
 .dropdown{
     position: relative;
     .dropdown-menu{
@@ -24,4 +37,8 @@
 
 .navbar-item img{
     max-height: 3rem;
+}
+
+.menu-list:hover{
+    color: rgb(4, 223, 168);
 }
