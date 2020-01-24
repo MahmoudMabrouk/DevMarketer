@@ -12,14 +12,24 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/home');
 });
 
 Auth::routes();
-Route::get('/logout','Auth\LoginController@logout');
-Route::prefix('manage')->middleware('role:superadministrator|administrator|editor|author|contributor')->group(function(){
 
-    Route::get('/','ManageController@index');
-    Route::get('/dashboard','ManageController@dashboard')->name('manage.dashboard');
+
+Route::group(['middleware' => 'auth'],function (){
+    Route::prefix('manage')->middleware('role:superadministrator|administrator|editor|author|contributor')->group(function(){
+        
+        Route::get('/','ManageController@index');
+        Route::get('/dashboard','ManageController@dashboard')->name('manage.dashboard');
+        Route::resource('/users','UserController');
+        Route::resource('/permission','PermissionController')->except('destroy');
+        Route::resource('/role','RoleController')->except('destroy');
+        Route::resource('/post','PostController');
+    });
+    
+    
+    Route::any('/logout','Auth\LoginController@logout');
 });
 Route::get('/home', 'HomeController@index')->name('home');
