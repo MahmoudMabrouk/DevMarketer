@@ -17,19 +17,19 @@ Route::get('/', function () {
 
 Auth::routes();
 
-
 Route::group(['middleware' => 'auth'],function (){
     Route::prefix('manage')->middleware('role:superadministrator|administrator|editor|author|contributor')->group(function(){
-        
+
         Route::get('/','ManageController@index');
         Route::get('/dashboard','ManageController@dashboard')->name('manage.dashboard');
         Route::resource('/users','UserController');
         Route::resource('/permission','PermissionController')->except('destroy');
         Route::resource('/role','RoleController')->except('destroy');
         Route::resource('/post','PostController');
+        Route::get('/post/storeImage/{id}','Postcontroller@storeImage');
     });
-    
-    
+
+
     Route::any('/logout','Auth\LoginController@logout');
 });
 Route::get('/home', 'HomeController@index')->name('home');

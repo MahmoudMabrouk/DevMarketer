@@ -51,8 +51,8 @@ class PermissionController extends Controller
             $permission->display_name   = $request->display_name;
             $permission->description    = $request->description;
             $permission->save();
-            
-            Session::flash('success', 'Permissions were all successfully added');
+
+           // Session::flash('success', 'Permissions were all successfully added');
             return redirect()->route('permission.index');
 
         } else if($request->permission_type == 'crud'){
@@ -62,26 +62,26 @@ class PermissionController extends Controller
             $this->validate($request,$rules);
             $crud = explode(',', $request->crud_selected);
             if(count($crud)>0){
-               
+
                 foreach($crud as $item){
                     $name           = strtolower($item) . '-' . strtolower($request->resource);
                     $display_name   = ucwords($item . ' ' . $request->resource);
                     $description    = 'Allow a User to ' . ucwords($item) . ' a ' . ucwords($request->resource);
-                    
+
                     $permission = new Permission();
                     $permission->name           = $name;
                     $permission->display_name   = $display_name;
                     $permission->description    =$description;
                     $permission->save();
                 }
-                Session::flash('success', 'Permissions were all successfully added');
+               // Session::flash('success', 'Permissions were all successfully added');
                 return redirect()->route('permission.index');
             }
         }else {
-            dd('problem in save');
-            Session::flash('danger','Sorry a problem accoured while creating new Permissions.');
+           // dd('problem in save');
+            //Session::flash('danger','Sorry a problem accoured while creating new Permissions.');
             return redirect()->route('permission.create');
-        }   
+        }
     }
 
     /**
@@ -134,7 +134,7 @@ class PermissionController extends Controller
         if($permission->save()){
                 return redirect()->route('permission.show',$id);
         }else{
-                Session::flash('error','Sorry! some Problem acourded in Update Permission');
+                //Session::flash('error','Sorry! some Problem acourded in Update Permission');
                 return redirect()->route('permission.edit',$id);
         }
     }

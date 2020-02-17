@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class ManageController extends Controller
 {
@@ -11,6 +12,9 @@ class ManageController extends Controller
         return redirect()->route('manage.dashboard');
     }
     public function dashboard(){
-        return view('manage.dashboard');
+        $status ='published';
+        $posts = Post::orderBy('id','desc')->where('status',$status)->paginate(10);
+
+        return view('manage.dashboard')->withPosts($posts);
     }
 }

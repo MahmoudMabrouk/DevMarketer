@@ -11,7 +11,7 @@
                 <a href="{{route('role.create')}}" class="button is-primary is-pulled-right">Create Roles</a>
             </div>
         </div>
-        <hr class="m-t-5">        
+        <hr class="m-t-5">
 
         <div class="columns is-multiline">
             @foreach($roles as $role)
@@ -21,9 +21,9 @@
                             <div class="media-content">
                                 <div class="content">
 
-                                    <h3 class="title">{{$role->display_name}}</h3> 
+                                    <h3 class="title">{{$role->display_name}}</h3>
                                     <h4 class="subtitle"><em>{{$role->name}}</em></h4>
-                                    <p> 
+                                    <p style="height: 100px; overflow: hidden;">
                                         {{$role->description}}
                                     </p>
                                 </div>
@@ -37,10 +37,10 @@
                                 </div>
                             </div>
                         </article>
-                        
+
                     </div>
                 </div>
-                
+
             @endforeach
         </div>
 

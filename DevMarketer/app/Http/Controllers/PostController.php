@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
+use Image;
+use DB;
 
 class PostController extends Controller
 {
@@ -13,7 +17,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::orderBy('id','desc')->paginate(20);
+
+        return view('manage.posts.index')->withPosts($posts);
     }
 
     /**
@@ -23,7 +29,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('manage.posts.create');
     }
 
     /**
@@ -34,7 +40,36 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        //dd($request->image);
+        $request->validate([
+            'title'     =>  'required|string|unique:posts',
+            'content'   =>  'required|string',
+            'image'     =>  'required|image|max:2048',
+        ]);
+
+        $image_file =$request->image;
+
+        $image = Image::make($image_file);
+
+        Response::make($image->encode('jpeg'));
+
+        $slug = join('-',explode(' ',$request->title));
+
+        $post = new Post();
+        $post->title        = $request->title;
+        $post->content      = $request->content;
+        $post->image        = $image;
+        $post->status       = $request->status;
+        $post->auther_id    = auth()->user()->id;
+        $post->slug         = $slug;
+
+
+
+        if($post->save()){
+            return redirect(route('post.show',$post->id));
+        }
+        return redirect()->back()->with('error','Sorry ...! some error happen when add post ');
     }
 
     /**
@@ -45,7 +80,20 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::findOrFail($id);
+        return view('manage.posts.show')->withPost($post);
+
+    }
+
+    public function storeImage($id){
+
+        $data = $this->show($id);
+        //dd($data->post->image);
+        $image = Image::make($data->post->image);
+        $response = Response::make($image->encode('jpeg'));
+        $response->header('Content-Type','image/jpeg');
+
+        return $response;
     }
 
     /**

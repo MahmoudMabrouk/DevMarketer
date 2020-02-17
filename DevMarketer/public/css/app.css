@@ -20951,6 +20951,16 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   ============ Text Overrides ==============
   ==========================================*/
 
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.subtitle {
+  color: blue;
+}
+
 .is-muted {
   color: #aaaaaa !important;
 }
@@ -20979,12 +20989,54 @@ a.is-muted:hover {
 }
 
 .navbar-link:hover {
-  color: #04dfa8;
+  color: #00b9a1;
 }
 
 .navbar-burger {
   border: none;
   display: inherit;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* image */
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  font-size: 1.25em;
+  font-weight: 400;
+  color: #fff;
+  background-color: #068f7d;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 7px;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  background-color: #00b9a1;
+}
+
+.inputfile + label {
+  cursor: pointer;
+  /* "hand" cursor */
+}
+
+.inputfile:focus + label {
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
 }
 
 .m-t-5 {
@@ -21538,7 +21590,7 @@ a.is-muted:hover {
   bottom: 0;
   widows: 200px;
   background-color: white;
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-transition: left 0.3s ease-in-out;
   transition: left 0.3s ease-in-out;
 }
@@ -21600,6 +21652,94 @@ hr {
 
 .navbar-burger {
   border: none;
+}
+
+.widget-area {
+  min-height: 75px;
+  padding: 10px;
+  border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+}
+
+.widget-area.author-widget .selected-author {
+  display: -webkit-box;
+  display: flex;
+  align-content: flex-start;
+}
+
+.widget-area.author-widget .selected-author img {
+  border-radius: 25px;
+}
+
+.widget-area.author-widget .selected-author .author {
+  margin: auto 0 auto 10px;
+}
+
+.widget-area.author-widget .selected-author .author .subtitle {
+  font-weight: 300;
+  font-size: 0.8em;
+}
+
+.widget-area.post-status-widget .status {
+  display: -webkit-box;
+  display: flex;
+  align-content: flex-start;
+}
+
+.widget-area.post-status-widget .status .status-icon {
+  min-width: 50px;
+}
+
+.widget-area.post-status-widget .status .status-icon .icon {
+  width: 100%;
+}
+
+.widget-area.post-status-widget .status .status-icon .icon i {
+  text-align: center;
+}
+
+.widget-area.post-status-widget .status .status-details {
+  margin-left: 10px;
+}
+
+.widget-area.post-status-widget .status .status-details h4 {
+  font-weight: 400;
+}
+
+.widget-area.post-status-widget .status .status-details h4 span.status-emphasis {
+  font-weight: 800;
+}
+
+.widget-area.post-status-widget .status .status-details p {
+  font-weight: 300;
+  font-size: 0.8em;
+}
+
+.widget-area.publish-buttons-widget {
+  display: -webkit-box;
+  display: flex;
+  min-height: 50px;
+}
+
+.widget-area.publish-buttons-widget .primary-action-button,
+.widget-area.publish-buttons-widget .secondary-action-button {
+  -webkit-box-flex: 1;
+          flex: 1;
+  margin: 0 5px;
+}
+
+/* image */
+
+.file-upload-form,
+.image-preview {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 20px;
+}
+
+img.preview {
+  width: 200px;
+  background-color: white;
+  border: 1px solid #DDD;
+  padding: 5px;
 }
 
 /* Table Styles */

@@ -1,4 +1,4 @@
-<nav class="navbar has-shadow ">
+<nav class="navbar p-t-15 has-shadow ">
             <div class="container ">
                 <div class="navbar-brand" >
                     <a class="navbar-item is-paddingless m-r-15" href=" {{url('home')}}">
@@ -14,7 +14,7 @@
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
-                    </a>                
+                    </a>
                 </div>
                 <div class="navbar-menu">
                     <div class="navbar-start">
@@ -24,8 +24,8 @@
                     </div> <!-- end of .navbar-start -->
                     <div class="navbar-end nav-menu " style="over-flow: visable">
                         @if(Auth::guest())
-                       
-                        <a href="{{url('login')}}" class="button is-light">Login</a>
+
+                        <a href="{{url('login')}}" class="button is-light m-r-10">Login</a>
                         <a href="{{url('register')}}" class="button is-primary">Join the Community</a>
 
                         @else
@@ -33,23 +33,23 @@
                         <a class="navbar-link "> Hey {{Auth::user()->name}}</a>
                             <ul class=" navbar-dropdown">
                                 <li><a class="navbar-item" href="#">
-                                    <span class="icon"><i class="fa fa-fw m-r-10 fa-user-circle-o"></i></span>    
+                                    <span class="icon"><i class="fa fa-fw m-r-10 fa-user-circle-o"></i></span>
                                     Profile</a></li>
                                 <li><a class="navbar-item" href="#">
-                                <span class="icon"><i class="fa fa-fw m-r-10 fa-bell"></i></span>   
+                                <span class="icon"><i class="fa fa-fw m-r-10 fa-bell"></i></span>
                                 Notifications</a></li>
                                 <li><a class="navbar-item" href="{{route('manage.dashboard')}}">
-                                    <span class="icon"><i class="fa fa-fw m-r-10 fa-cog"></i></span>   
+                                    <span class="icon"><i class="fa fa-fw m-r-10 fa-cog"></i></span>
                                     Manage</a></li>
                                 <li><a class="navbar-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    <span class="icon"><i class="fa fa-fw m-r-10 fa-sign-out"></i></span>   
+                                    <span class="icon"><i class="fa fa-fw m-r-10 fa-sign-out"></i></span>
                                     Logout</a></li>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     {{ csrf_field() }}
                                 </form>
                             </ul>
                         </butten>
-                        
+
                         @endif
                     </div>
 
@@ -83,7 +83,7 @@
                 <a class="navbar-item is-tab is-active">Learn</a>
                 <a class="navbar-item is-tab">Discuss</a>
                 <a class="navbar-item is-tab">Share</a>
-            </div> 
+            </div>
 
 
             <div class="navbar-end nav-menu" style="overflow: visible">
